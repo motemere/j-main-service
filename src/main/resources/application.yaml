@@ -1,0 +1,14 @@
+server:
+  port: 7070
+
+spring:
+  main:
+    banner-mode: "off"
+
+  output:
+    ansi:
+      enabled: always
+
+  devtools:
+    restart:
+      enabled: true
