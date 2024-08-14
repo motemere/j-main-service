@@ -60,7 +60,7 @@ jobs:
         with:
           name: JUnit Report
           path: 'build/test-results/test/*.xml'
-          reporter: java-junit
+          reporter: jest-junit
 
       - name: Upload code coverage
         if: always()
