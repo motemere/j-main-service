@@ -55,12 +55,10 @@ jobs:
           path: build/reports/tests/test
 
       - name: Test Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
         with:
-          name: JUnit Report
-          path: 'build/test-results/test/*.xml'
-          reporter: jest-junit
+          files: build/test-results/test/*.xml
 
       - name: Upload code coverage
         if: always()
